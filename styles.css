@@ -55,8 +55,17 @@ body{
   flex-direction: column;
 }
 
-.dropDown > img {
-  align-self: center;
+
+button{
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.accordian:active {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  
 }
 
 .ans{
