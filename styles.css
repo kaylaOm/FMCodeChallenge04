@@ -1,20 +1,26 @@
+html{
+  min-height: 100%;
+}
+
 body{
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   color: hsl(237, 12%, 33%);
   font-size: 12px;
+  padding: 10% 0;
 }
 
 .container{
   margin: auto;
   width: 90%;
-  margin-bottom: 3em;
 }
 
-.imgDesk{
+.imgDesk, .box{
   display: none;
 }
+
 
 .imgMob{
   width: 80%;
@@ -71,21 +77,83 @@ button{
 .ans{
 display: none;
 color:  hsl(240, 6%, 50%);
+font-weight: 400;
 }
 
 footer{
   text-align: center;
+  margin-top: 2em;
 }
 
-
 @media only screen and (min-width: 500px){
+  /* For tablet: */
+  .graphics{
+    width: 90%;
+    margin: auto;
+  }
+
+  .mainText{
+    background-position-y: -75px;
+  }
+}
+
+@media only screen and (min-width: 850px){
   /* For desktop: */
-  
-  .imgDesk{
+  .container{
+    background-color: #fff;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+    
+  }
+
+  .graphics{
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -565px -320px;
+    width: 100%;
+    padding: 5em 0;
+  }
+
+  .box{
     display: block;
+    float: left;
+    margin-left: -8em;
+    margin-top: 12em;
+    padding-right: -15em;
+  }
+
+  .imgD{
+    overflow: hidden;
+  }
+
+  .imgDesk{
+    display: inline-block;
+    margin-left: -6em;
+    
+  }
+
+  .box{
+    float: left;
+    position: absolute;
   }
 
   .imgMob{
     display: none;
   }
+
+  .mainText{
+    box-shadow: none;
+    background-image: none;
+    text-align: left;
+    width: 100%;
+    padding: 5em 3em;
+  }
+
+  h1{
+    padding-left: .7em;
+  }
+
+  
 }
